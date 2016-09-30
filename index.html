@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="bower_components/animate/animate.css">
+	<script src="bower_components/angular/angular.min.js"></script>
+
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body ng-controller= "MainController">
+
+	<h1>San Diego Top Spots in AngularJS</h1>
+
+<table class="table table-striped"  id= "table">
+	<tr>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Link</th>
+	</tr>
+
+		<tr ng-repeat= "data in spots">
+			<td>{{data.name}}</td>
+			<td>{{data.description}}</td>
+			<td><a href="https://www.google.com/maps?q={{data.location[0]}},{{data.location[1]}}"><button type=button class= 'btn btn-primary'>Open in Google Maps</button>
+		</td>
+
+	</tr>
+</table>
+
+
+
+
+
+<script type="text/javascript" src='index.js'></script>
+<!--<script 
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGiuIyxCogNVmnyYj6-NG0jYXjvJsTyK8&callback=initMap" async defer>
+    </script>	-->
+</body>
+</html>
